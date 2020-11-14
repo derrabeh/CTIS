@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CTIS.View.RecordNewTest">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Label TextColor="Black" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           HeightRequest="110"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" 
+                           BackgroundColor="DeepPink">
+                Record New Test
+            </Label>
+
+            <ScrollView HeightRequest="2000">
+                <StackLayout>
+                    <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
+                        <StackLayout>
+
+
+
+
+
+
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

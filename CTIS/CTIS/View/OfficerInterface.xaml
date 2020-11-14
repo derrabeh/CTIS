@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CTIS.View.OfficerInterface">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Label TextColor="Black" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           HeightRequest="110"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" 
+                           BackgroundColor="DeepPink">
+                Hello Officer!
+            </Label>
+
+            <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
+                <StackLayout>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+
+                        <Button BackgroundColor="DeepPink"
+                                CornerRadius="0"
+                                Text="Generate Test Report"
+                                FontAttributes="Bold"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                HeightRequest="150"
+                                ></Button>
+
+
+                    </Grid>
+
+
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+
+
+                    <Button BackgroundColor="DeepPink"
+                                CornerRadius="0"
+                                Text="Logout"
+                                ></Button>
+
+
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

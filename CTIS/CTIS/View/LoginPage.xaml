@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CTIS.View.LoginPage">
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+
+            <Frame BackgroundColor="DeepPink">
+                <Label HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontSize="25"
+                       FontAttributes="Italic"
+                       TextColor="black">
+                    Covid-19 Testing System
+                </Label>
+            </Frame>
+
+
+            <Label TextColor="Black" 
+                           FontSize="20" 
+                           FontAttributes="Bold" 
+                           HeightRequest="140"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center" 
+                           BackgroundColor="DeepPink">
+                Sign In
+            </Label>
+
+            <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
+                <StackLayout>
+
+
+
+                    <Label FontAttributes="Bold" FontSize="20" TextColor="black">
+                        Username :
+                    </Label>
+
+                    <Frame Padding="0" BackgroundColor="Beige" CornerRadius="10">
+                        <Entry Placeholder="Username" FontSize="15" TextColor="Black"></Entry>
+                    </Frame>
+
+                    <Label FontAttributes="Bold" FontSize="20" TextColor="black">
+                        Password :
+                    </Label>
+
+                    <Frame Padding="1" BackgroundColor="Beige" CornerRadius="10">
+                        <Entry Placeholder="Password" FontSize="15" TextColor="Black"></Entry>
+                    </Frame>
+
+                    <Label>
+                    </Label>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button BackgroundColor="DeepPink"
+                                CornerRadius="20"
+                                Text="Sign In"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"></Button>
+
+                    </Grid>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+                    <Label></Label>
+
+                    <Label>Don't have an account?</Label>
+                    <Button BackgroundColor="DeepPink"
+                                CornerRadius="20"
+                                Text="Sign Up"
+                                ></Button>
+
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
