@@ -463,3 +463,8 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_ConvertRe
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Firebase.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\LiteDB.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Reactive.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll

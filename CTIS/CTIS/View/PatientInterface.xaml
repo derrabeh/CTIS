@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.PatientInterface">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             x:Class="CTIS.View.PatientInterface"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:PatientInterfaceVM x:Key="PIVM" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
 
@@ -60,8 +68,6 @@
                                 Text="Logout"
                                 Clicked="Button_Clicked_1"
                                 ></Button>
-
-
 
                 </StackLayout>
             </Frame>
