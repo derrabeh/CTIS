@@ -1,91 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.LoginPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             x:Class="CTIS.View.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:LoginVM x:Key="LVM"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White">
+        <Grid Padding="20" BindingContext="{StaticResource LVM}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="260" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
 
-            <Frame BackgroundColor="DeepPink">
-                <Label HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       FontSize="25"
-                       FontAttributes="Italic"
-                       TextColor="black">
-                    Covid-19 Testing System
-                </Label>
-            </Frame>
+            <!--Logo section-->
+            <StackLayout Grid.Row="0" VerticalOptions="Center">
+                <Label Text="C T I S"
+                   FontSize="54"
+                   HorizontalOptions="Center"
+                   TextColor="DeepPink" 
+                   FontFamily="Goldman"/>
+                <Label Text="Covid-19 Testing System"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   TextColor="DeepPink" />
+            </StackLayout>
 
+            <!--Log in Section-->
+            <StackLayout Grid.Row="1" VerticalOptions="Start">
+                <Entry Placeholder="Email" Text="{Binding Email}"/>
+                <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True"/>
+                <Button BackgroundColor="DeepPink"
+                        HeightRequest="40"
+                        Margin="0, 20"
+                        Command="{Binding LoginCommand}"
+                    CornerRadius="5"
+                    Text="Log In" 
+                    TextColor="White"/>
+            </StackLayout>
 
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="140"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Sign In
-            </Label>
-
-            <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                <StackLayout>
-
-
-
-                    <Label FontAttributes="Bold" FontSize="20" TextColor="black">
-                        Username :
-                    </Label>
-
-                    <Frame Padding="0" BackgroundColor="Beige" CornerRadius="10">
-                        <Entry Placeholder="Username" FontSize="15" TextColor="Black"></Entry>
-                    </Frame>
-
-                    <Label FontAttributes="Bold" FontSize="20" TextColor="black">
-                        Password :
-                    </Label>
-
-                    <Frame Padding="1" BackgroundColor="Beige" CornerRadius="10">
-                        <Entry Placeholder="Password" FontSize="15" TextColor="Black"></Entry>
-                    </Frame>
-
-                    <Label>
-                    </Label>
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button BackgroundColor="DeepPink"
-                                CornerRadius="20"
-                                Text="Sign In"
-                                Grid.Column="0"
-                                Grid.ColumnSpan="2"></Button>
-
-                    </Grid>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-
-                    <Label>Don't have an account?</Label>
-                    <Button BackgroundColor="DeepPink"
-                                CornerRadius="20"
-                                Text="Sign Up"
-                                ></Button>
-
-
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+            <!--Sign Up section-->
+            <Label Text="Don't have an account?"
+                   Grid.Row ="2" 
+                   HorizontalOptions="Center"/>
+            <Button Grid.Row ="3" 
+                    BackgroundColor="DeepPink"
+                    CornerRadius="5"
+                    Text="Sign Up"
+                    TextColor="White"
+                    Command="{Binding SignUpCommand}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
