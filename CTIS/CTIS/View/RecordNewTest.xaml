@@ -1,38 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.RecordNewTest">
-    <ContentPage.Content>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             x:Class="CTIS.View.RecordNewTest"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:RecordNewTestVM x:Key="RNTVM"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <StackLayout>
-
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Record New Test
+    <NavigationPage.TitleView>
+        <StackLayout BindingContext="{StaticResource RNTVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="&lt; Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BackCommand}" />
+                </Label.GestureRecognizers>
             </Label>
+            <Label Text="Cancel"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
 
-            <ScrollView HeightRequest="2000">
-                <StackLayout>
-                    <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                        <StackLayout>
+    <ContentPage.Content>
+        <StackLayout Margin="20" 
+                     BindingContext="{StaticResource RNTVM}" 
+                     HorizontalOptions="FillAndExpand">
 
+            <Label Text="Record a new test."
+                   FontSize="26"
+                   TextColor="DeepPink"
+                   FontFamily="Arimo"
+                   Margin="0,10"/>
 
+            <!--Patient Name-->
+            <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+                <Label Text="Patient Name: " VerticalOptions="Center" FontSize="18"/>
+                <Entry Text="{Binding PatientName}" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
+            <!--Test Date-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Test Date: " VerticalOptions="Center" FontSize="18" />
+                <DatePicker Date="{Binding TestDate}" FontSize="18" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
+            <!--Test Result-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Result: " VerticalOptions="Center" FontSize="18"/>
+                <Picker ItemsSource="{Binding ResultList}" SelectedItem="{Binding Result}" FontSize="18" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
+            <!--Result Date-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Result Date: " VerticalOptions="Center" FontSize="18" />
+                <DatePicker Date="{Binding ResultDate}" FontSize="18" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
+            <!--Test Status-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Status: " VerticalOptions="Center" FontSize="18" />
+                <Picker ItemsSource="{Binding StatusList}" SelectedItem="{Binding Status}" FontSize="18" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
 
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
+            <!--Tested By-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tested By: " VerticalOptions="Center" FontSize="18" />
+                <Entry Text="{Binding TestedBy}" HorizontalOptions="FillAndExpand" IsEnabled="False" />
+            </StackLayout>
 
-
+            <Button Text="Save" FontSize="16" Margin="0,40"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="DeepPink"
+                        TextColor="White"
+                        HeightRequest="40"
+                        CornerRadius="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
