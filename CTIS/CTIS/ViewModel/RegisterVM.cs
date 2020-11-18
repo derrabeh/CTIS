@@ -10,6 +10,8 @@ namespace CTIS.ViewModel
     class RegisterVM : BaseVM 
     {
         public User User { get; set; }
+        public Command LoginCommand { get; set; }
+        public Command SignUpCommand { get; set; }
 
         public RegisterVM()
         {
@@ -76,9 +78,6 @@ namespace CTIS.ViewModel
                 OnPropertyChanged();
             }
         }
-
-        public Command LoginCommand { get; set; }
-        public Command SignUpCommand { get; set; }
 
         private async void SignUpExecute(Object obj)
         {

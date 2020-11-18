@@ -12,11 +12,9 @@ namespace CTIS.Model
         public string Password { get; set; }
         public string Email { get; set; }
         public string Passport { get; set; }
-        public string Type { get; set; }
-        //if user is initialized from Register page, user type is automatically Patient
-        //new center officers must be registered by another existing officer 
+        public string Type { get; set; }  //tester, manager, officer, patient
+        public string Symtoms { get; set; } //returnee, quarantined, close contact, infected, suspected
 
-        //Patient types: returnee, quarantined, close contact, infected, suspected
-        //Officer positions: tester, manager 
+
     }
 }

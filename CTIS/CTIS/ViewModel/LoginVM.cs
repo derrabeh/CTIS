@@ -10,6 +10,8 @@ namespace CTIS.ViewModel
     public class LoginVM : BaseVM
     {
         public User User { get; set; }
+        public Command LoginCommand { get; set; }
+        public Command SignUpCommand { get; set; }
 
         public LoginVM()
         {
@@ -42,16 +44,13 @@ namespace CTIS.ViewModel
             }
         }
 
-        public Command LoginCommand { get; set; }
-        public Command SignUpCommand { get; set; }
-
         private async void LoginExecute(Object obj)
         {
             User user = await FirebaseDBConnection.GetUserAsync(User);
             if (user != null)
             {
                 App.User = user;
-                Application.Current.MainPage = new NavigationPage(new RecordNewTest());
+                Application.Current.MainPage = new NavigationPage(new AddCentre());
             }
             else if (!IsValidEmail(User.Email))
             {
@@ -85,7 +84,6 @@ namespace CTIS.ViewModel
             try
             {
                 MailAddress m = new MailAddress(email);
-
                 return true;
             }
             catch (FormatException)

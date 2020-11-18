@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CTIS.ViewModel"
              x:Class="CTIS.View.GenerateTestReport">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:GenerateTestReportVM x:Key="GTRVM" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
 
         <StackLayout>
@@ -13,14 +21,29 @@
                            VerticalTextAlignment="Center"
                            HorizontalTextAlignment="Center" 
                            BackgroundColor="DeepPink">
-                Record New Test
+                Generate Test Report
             </Label>
 
             <ScrollView HeightRequest="2000">
                 <StackLayout>
-                    <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                        <StackLayout>
-
+                    <Frame HeightRequest="800" Margin="0, 0 ,0, 0" BackgroundColor="White" HasShadow="True">
+                        <StackLayout BindingContext="{StaticResource GTRVM}">
+                            <ListView ItemsSource="{Binding CovidTestList}"
+                                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Grid BackgroundColor="DeepPink" >
+                                                <Label Text="{Binding TestID}" 
+                                       VerticalOptions="Center"
+                                       Margin="20, 0"
+                                       FontSize="20"
+                                       TextColor="Black"/>
+                                            </Grid>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

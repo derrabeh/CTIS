@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CTIS.View.RegisterTestCentre.xaml", "View/RegisterTestCentre.xaml", typeof(global::CTIS.View.RegisterTestCentre))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("CTIS.View.AddTester.xaml", "View/AddTester.xaml", typeof(global::CTIS.View.AddTester))]
 
 namespace CTIS.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\RegisterTestCentre.xaml")]
-    public partial class RegisterTestCentre : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\AddTester.xaml")]
+    public partial class AddTester : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(RegisterTestCentre));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddTester));
         }
     }
 }

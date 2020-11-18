@@ -1,9 +1,7 @@
 ﻿using CTIS.Model;
 using CTIS.Utilities;
-using CTIS.View;
 using System;
 using System.Collections.ObjectModel;
-using System.Net.Mail;
 using Xamarin.Forms;
 
 namespace CTIS.ViewModel
@@ -29,7 +27,7 @@ namespace CTIS.ViewModel
             ResultList.Add("Negative");
             Status = "Pending result";
             TestedBy = App.User.Name;
-            SaveCommand = new Command(SaveTestExecute);
+            SaveCommand = new Command(SaveExecute);
             BackCommand = new Command(BackExecute);
             CancelCommand = new Command(CancelExecute);
         }
@@ -45,7 +43,7 @@ namespace CTIS.ViewModel
             await Application.Current.MainPage.Navigation.PopAsync();
         }
 
-        private async void SaveTestExecute(Object obj)
+        private async void SaveExecute(Object obj)
         {
             if (string.IsNullOrWhiteSpace(CovidTest.PatientName))
             {
@@ -57,7 +55,6 @@ namespace CTIS.ViewModel
                 await FirebaseDBConnection.AddTestAsync(CovidTest);
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
-            
         }
 
         public string PatientName

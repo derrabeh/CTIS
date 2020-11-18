@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace CTIS.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegisterTestCentre : ContentPage
+    public partial class AddTester : ContentPage
     {
-        public RegisterTestCentre()
+        public AddTester()
         {
             InitializeComponent();
         }

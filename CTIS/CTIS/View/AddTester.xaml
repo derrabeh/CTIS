@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CTIS.ViewModel"
+             x:Class="CTIS.View.AddTester"
+             NavigationPage.HasNavigationBar="True" >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:AddTesterVM x:Key="ATVM"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <NavigationPage.TitleView>
+        <StackLayout BindingContext="{StaticResource ATVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="&lt; Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BackCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Text="Cancel"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout Margin="20" 
+                     BindingContext="{StaticResource ATVM}" 
+                     HorizontalOptions="FillAndExpand">
+        
+        <Label Text="Record a new tester."
+                   FontSize="26"
+                   TextColor="DeepPink"
+                   FontFamily="Arimo"
+                   Margin="0,10"/>
+
+        <!--Full name-->
+        <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+            <Label Text="Full Name: " VerticalOptions="Center" FontSize="18"/>
+            <Entry Text="{Binding Name}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <!--Date of birth-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Date of Birth: " VerticalOptions="Center" FontSize="18" />
+            <DatePicker Date="{Binding DOB}" FontSize="18" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <!--IC/ Passport No-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="IC / Passport No: " VerticalOptions="Center" FontSize="18"/>
+            <Entry Text="{Binding Passport}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <!--Email-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Email: " VerticalOptions="Center" FontSize="18"/>
+            <Entry Text="{Binding Email}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <!--Password-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Password: " VerticalOptions="Center" FontSize="18"/>
+            <Entry Text="{Binding Password}" HorizontalOptions="FillAndExpand" IsPassword="True"/>
+        </StackLayout>
+
+        <!--Position-->
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Position: " VerticalOptions="Center" FontSize="18" />
+            <Entry Text="Tester" HorizontalOptions="FillAndExpand" IsEnabled="False" />
+        </StackLayout>
+        
+        <Button Text="Add tester" FontSize="16" Margin="0,40"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="DeepPink"
+                        TextColor="White"
+                        HeightRequest="40"
+                        CornerRadius="10"/>
+    </StackLayout>
+
+
+</ContentPage>
+

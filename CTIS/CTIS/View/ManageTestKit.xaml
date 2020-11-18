@@ -1,31 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.ManageTestKit">
-    <ContentPage.Content>
-    <StackLayout>
-
-        <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-            Record New Test
-        </Label>
-
-        <ScrollView HeightRequest="2000">
-            <StackLayout>
-                <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                    <StackLayout>
-
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+             x:Class="CTIS.View.ManageTestKit"
+             xmlns:local="clr-namespace:CTIS.ViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ManageTestKitVM x:Key="MTKVM" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
 
-    </StackLayout>
-    </ContentPage.Content>
 </ContentPage>

@@ -25,7 +25,7 @@ namespace CTIS.Utilities
                     Password = item.Object.Password,
                     Passport = item.Object.Passport,
                     DOB = item.Object.DOB,
-                    Type= item.Object.Type
+                    Type = item.Object.Type
                 }).ToList();
         }
 
@@ -42,6 +42,15 @@ namespace CTIS.Utilities
             user.Type = "Patient";
             await firebaseClient.Child("User").PostAsync(user);
         }
+
+        //add testers
+        public static async Task AddTesterAsync(User tester)
+        {
+            tester.UserID = Guid.NewGuid().ToString();
+            tester.Type = "Tester";
+            await firebaseClient.Child("User").PostAsync(tester);
+        }
+
         #endregion
 
         #region CovidTest Methods
@@ -68,5 +77,45 @@ namespace CTIS.Utilities
         }
         #endregion
 
+        #region TestCentre Methods
+
+        public static async Task<List<TestCentre>> GetAllCentresAsync()
+        {
+            return (await firebaseClient.Child("TestCentre").OnceAsync<TestCentre>()).Select(
+                item => new TestCentre
+                {
+                    CentreID = item.Object.CentreID,
+                    CentreName = item.Object.CentreName,
+                    PhoneNum = item.Object.PhoneNum,
+                    OpeningTime = item.Object.OpeningTime,
+                    ClosingTime = item.Object.ClosingTime,
+                    Address = item.Object.Address
+                }).ToList();
+        }
+
+        public static async Task AddCentreAsync(TestCentre centre)
+        {
+            centre.CentreID = Guid.NewGuid().ToString();
+            await firebaseClient.Child("TestCentre").PostAsync(centre);
+        }
+        #endregion
+
+        #region TestKit Methods
+        public static async Task<List<TestKit>> GetAllKitsAsync()
+        {
+            return (await firebaseClient.Child("TestKit").OnceAsync<TestKit>()).Select(
+                item => new TestKit
+                {
+                    //TestID = item.Object.TestID,
+                    //PatientName = item.Object.TestID,
+                    //TestDate = item.Object.TestDate,
+                    //Result = item.Object.Result,
+                    //ResultDate = item.Object.ResultDate,
+                    //Status = item.Object.Status,
+                    //TestedBy = item.Object.TestedBy
+                }).ToList();
+        }
+
+        #endregion
     }
 }

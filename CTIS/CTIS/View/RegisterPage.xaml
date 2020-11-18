@@ -36,26 +36,31 @@
             <!--Sign Up Section-->
             <StackLayout Grid.Row="1" VerticalOptions="Start" >
 
+                <!--Full name-->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Full Name: " VerticalOptions="Center" FontSize="18"/>
                     <Entry Text="{Binding Name}" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
-
+                
+                <!--Date of birth-->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Date of Birth: " VerticalOptions="Center" FontSize="18" />
                     <DatePicker Date="{Binding DOB}" FontSize="18" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
-
+                
+                <!--IC/ Passport No-->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="IC / Passport No: " VerticalOptions="Center" FontSize="18"/>
                     <Entry Text="{Binding Passport}" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
+                <!--Email-->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Email: " VerticalOptions="Center" FontSize="18"/>
                     <Entry Text="{Binding Email}" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
+                <!--Password-->
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Password: " VerticalOptions="Center" FontSize="18"/>
                     <Entry Text="{Binding Password}" HorizontalOptions="FillAndExpand" IsPassword="True"/>
