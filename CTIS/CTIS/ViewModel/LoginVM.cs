@@ -50,7 +50,7 @@ namespace CTIS.ViewModel
             if (user != null)
             {
                 App.User = user;
-                Application.Current.MainPage = new NavigationPage(new AddCentre());
+                Application.Current.MainPage = new NavigationPage(new ManageTestKit());
             }
             else if (!IsValidEmail(User.Email))
             {

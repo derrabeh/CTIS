@@ -13,6 +13,7 @@ namespace CTIS.Utilities
     {
         static FirebaseClient firebaseClient = new FirebaseClient("https://ctis-bmc208.firebaseio.com/");
 
+        //get all users, get specific user, add patient, add tester
         #region User methods
         public static async Task<List<User>> GetAllUsersAsync()
         {
@@ -53,6 +54,7 @@ namespace CTIS.Utilities
 
         #endregion
 
+        //Get all test, update test, add test
         #region CovidTest Methods
         public static async Task<List<CovidTest>> GetAllTestsAsync()
         {
@@ -75,8 +77,17 @@ namespace CTIS.Utilities
             test.TestedBy = App.User.Name;
             await firebaseClient.Child("CovidTest").PostAsync(test);
         }
+
+        //Update test 
+        public static async Task EditTestAsync(CovidTest test)
+        {
+            var item = (await firebaseClient.Child("CovidTest").OnceAsync<CovidTest>()).
+                Where(t => t.Object.TestID == test.TestID).FirstOrDefault();
+            await firebaseClient.Child("CovidTest").Child(item.Key).PutAsync(test);
+        }
         #endregion
 
+        //get all centre, add centre
         #region TestCentre Methods
 
         public static async Task<List<TestCentre>> GetAllCentresAsync()
@@ -100,20 +111,40 @@ namespace CTIS.Utilities
         }
         #endregion
 
+        //get all kits, add kit, update kit, delete kit
         #region TestKit Methods
         public static async Task<List<TestKit>> GetAllKitsAsync()
         {
             return (await firebaseClient.Child("TestKit").OnceAsync<TestKit>()).Select(
                 item => new TestKit
                 {
-                    //TestID = item.Object.TestID,
-                    //PatientName = item.Object.TestID,
-                    //TestDate = item.Object.TestDate,
-                    //Result = item.Object.Result,
-                    //ResultDate = item.Object.ResultDate,
-                    //Status = item.Object.Status,
-                    //TestedBy = item.Object.TestedBy
+                    KitID = item.Object.KitID,
+                    KitName = item.Object.KitName,
+                    CurrentStock = item.Object.CurrentStock,
+                    LastUpdated = item.Object.LastUpdated,
+                    Status = item.Object.Status,
                 }).ToList();
+        }
+
+        public static async Task AddKitAsync(TestKit kit)
+        {
+            kit.KitID = Guid.NewGuid().ToString();
+            await firebaseClient.Child("TestKit").PostAsync(kit);
+        }
+
+        //update kit
+        public static async Task EditKitAsync(TestKit kit)
+        {
+            var item = (await firebaseClient.Child("TestKit").OnceAsync<TestKit>()).
+                Where(k => k.Object.KitID == kit.KitID).FirstOrDefault();
+            await firebaseClient.Child("TestKit").Child(item.Key).PutAsync(kit);
+        }
+
+        public static async Task DeleteKitAsync(TestKit kit)
+        {
+            var item = (await firebaseClient.Child("TestKit").OnceAsync<TestKit>()).
+                Where(k => k.Object.KitID == kit.KitID).FirstOrDefault();
+            await firebaseClient.Child("TestKit").Child(item.Key).DeleteAsync();
         }
 
         #endregion

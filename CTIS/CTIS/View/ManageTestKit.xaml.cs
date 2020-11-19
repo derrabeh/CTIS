@@ -15,6 +15,7 @@ namespace CTIS.View
         public ManageTestKit()
         {
             InitializeComponent();
+
         }
     }
 }

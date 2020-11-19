@@ -17,5 +17,14 @@ namespace CTIS.Utilities
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        //to deselect an item in listview after returning from update page
+        public bool SetField<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (Object.Equals(field, value)) return false;
+            field = value;
+            OnPropertyChanged(propertyName);
+            return true;
+        }
     }
 }
