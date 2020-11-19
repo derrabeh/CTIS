@@ -11,11 +11,6 @@
 
     <NavigationPage.TitleView>
         <StackLayout BindingContext="{StaticResource ATVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Label Text="&lt; Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BackCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
             <Label Text="Cancel"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding CancelCommand}" />

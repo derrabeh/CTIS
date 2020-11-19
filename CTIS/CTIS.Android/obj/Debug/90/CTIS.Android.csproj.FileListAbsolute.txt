@@ -41,15 +41,18 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\res\mipmap-xxhdp
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\res\drawable\deeppink.png
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\uploadflags.txt
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\CTIS.Android.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\CTIS.Android.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\CTIS.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\CTIS.pdb
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Firebase.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Java.Interop.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\LiteDB.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Mono.Android.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Mono.Security.dll
@@ -57,6 +60,7 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\M
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\mscorlib.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Core.dll
@@ -79,7 +83,9 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\S
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Numerics.Vectors.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Numerics.Vectors.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.pdb
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Reactive.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.dll
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.pdb
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
@@ -463,8 +469,3 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_ConvertRe
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Firebase.dll
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\LiteDB.dll
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Reactive.dll
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll

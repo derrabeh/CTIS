@@ -15,12 +15,13 @@ namespace CTIS.ViewModel
         public Command AddCommand { get; set; }
         public Command BackCommand { get; set; }
 
+
         public ManageTestKitVM()
         {
             KitsList = new ObservableCollection<TestKit>();
             GetAllKits();
-            BackCommand = new Command(BackExecute);
             AddCommand = new Command(AddExecute);
+            BackCommand = new Command(BackExecute);
         }
 
         public TestKit SelectedItem

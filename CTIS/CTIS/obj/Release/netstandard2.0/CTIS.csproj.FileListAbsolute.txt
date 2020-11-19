@@ -2,6 +2,7 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.deps.
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\ref\CTIS.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.pdb
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.csprojAssemblyReference.cache
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\App.xaml.g.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\AddCentre.xaml.g.cs
@@ -19,6 +20,7 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\Regis
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\TesterInterface.xaml.g.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\UpdateTest.xaml.g.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ViewTestingHistory.xaml.g.cs
+C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ViewTestReport.xaml.g.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.AssemblyInfoInputs.cache
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.AssemblyInfo.cs
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.csproj.CoreCompileInputs.cache
@@ -26,4 +28,3 @@ C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\XamlC.stam
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\ref\CTIS.dll
 C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.pdb
-C:\Users\herpp\source\repos\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.csprojAssemblyReference.cache

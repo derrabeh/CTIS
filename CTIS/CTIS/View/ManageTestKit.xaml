@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CTIS.View.ManageTestKit"
-             xmlns:local="clr-namespace:CTIS.ViewModel">
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.HasNavigationBar="True">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -10,10 +12,10 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <!--Back, Add, Update command-->
+    <!--Back, Add command-->
     <NavigationPage.TitleView>
         <StackLayout BindingContext="{StaticResource MTKVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Label Text="&lt; Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
+            <Label Text="Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding BackCommand}" />
                 </Label.GestureRecognizers>
@@ -28,10 +30,17 @@
 
     <StackLayout BindingContext="{StaticResource MTKVM}">
         <ListView ItemsSource="{Binding KitsList}"
-                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                  HasUnevenRows="True"
+                  Margin="20" x:Name="KitsList">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding KitName}" />
+                    <ViewCell >
+                        <StackLayout>
+                            <Label Text="{Binding KitName}" TextColor="DeepPink" FontSize="20" />
+                            <Label Text="{Binding Status}" TextColor="Gray" FontSize="18"/>
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

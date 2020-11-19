@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
@@ -40,7 +39,7 @@ namespace CTIS.Utilities
         public static async Task AddUserAsync(User user)
         {
             user.UserID = Guid.NewGuid().ToString();
-            user.Type = "Patient";
+            user.Type = "Officer";
             await firebaseClient.Child("User").PostAsync(user);
         }
 

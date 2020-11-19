@@ -12,24 +12,17 @@ namespace CTIS.ViewModel
         public TestCentre TestCentre { get; set; }
         public Command CancelCommand { get; set; }
         public Command SaveCommand { get; set; }
-        public Command BackCommand { get; set; }
 
         public AddCentreVM()
         {
             TestCentre = new TestCentre();
             SaveCommand = new Command(SaveExecute);
-            BackCommand = new Command(BackExecute);
             CancelCommand = new Command(CancelExecute);
         }
 
         public static bool IsValidPhoneNum(string telNo)
         {
             return Regex.Match(telNo, @"^\+\d{1,9}$").Success;
-        }
-
-        private async void BackExecute(Object obj)
-        {
-            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
         private async void CancelExecute(Object obj)

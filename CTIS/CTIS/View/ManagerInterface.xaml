@@ -1,85 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.ManagerInterface">
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="White">
+             x:Class="CTIS.View.ManagerInterface"
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:OfficerInterfaceVM x:Key="OIVM"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Hello Manager!
-            </Label>
+    <Grid BindingContext="{StaticResource OIVM}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
 
-            <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                <StackLayout>
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="Register New Test Centre"
-                                FontAttributes="Bold"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HeightRequest="150"
-                                ></Button>
-
-                        <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="Record Tester"
-                                FontAttributes="Bold"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                HeightRequest="150"
-                                ></Button>
-
-                        <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="Manager Test Kit"
-                                FontAttributes="Bold"
-                                Grid.Column="0"
-                                Grid.Row="1"
-                                HeightRequest="150"
-                                ></Button>
-
-
-                    </Grid>
-
-
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-
-
-                    <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="Logout"
-                                ></Button>
-
-
-                </StackLayout>
-            </Frame>
+        <!--Logo section-->
+        <Image Source="deeppink.png" 
+               Aspect="Fill" 
+               HeightRequest="300" 
+               Margin="0"
+               VerticalOptions="StartAndExpand"/>
+        <StackLayout Padding="20" Grid.Row="0" VerticalOptions="Center">
+            <Label Text="C T I S"
+                   FontSize="54"
+                   HorizontalOptions="Center"
+                   TextColor="White" 
+                   FontFamily="Goldman"/>
         </StackLayout>
-    </ContentPage.Content>
+
+        
+        <Label Grid.Row="1" 
+               Text="{Binding WelcomeLabel}"
+               Padding="20"
+                   FontSize="26"
+                   HorizontalOptions="Start"
+                   TextColor="DeepPink"
+                   FontFamily="Arimo"/>
+
+        <!--Main menu-->
+        <StackLayout Grid.Row="2" Margin="20">
+            <Button Command="{Binding RegisterTestCentreCommand}"
+                CornerRadius="5"
+                Text="Register Test Centre" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+            <Button Command="{Binding ManageTestKitCommand}"
+                CornerRadius="5"
+                Text="Manage Test Kits" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+            <Button Command="{Binding GenerateTestReportCommand}"
+                CornerRadius="5"
+                Text="Generate test report" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+            <Button Command="{Binding RecordTesterCommand}"
+                CornerRadius="5"
+                Text="Record Tester" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+        </StackLayout>
+
+        <Button Grid.Row ="3" 
+                    BackgroundColor="DeepPink"
+                    Text="Sign Out"
+                    TextColor="White"
+                    Command="{Binding SignOutCommand}"/>
+
+    </Grid>
 </ContentPage>

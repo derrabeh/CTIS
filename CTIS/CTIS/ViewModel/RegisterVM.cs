@@ -19,8 +19,8 @@ namespace CTIS.ViewModel
             LoginCommand = new Command(LoginExecute);
             SignUpCommand = new Command(SignUpExecute, CanSignUpExecute);
             User.Name = "Derra";
-            User.Email = "derra@gmail.com";
-            User.Password = "Password123";
+            User.Email = "patient@gmail.com";
+            User.Password = "password123";
             User.Passport = "A123456";
         }
 

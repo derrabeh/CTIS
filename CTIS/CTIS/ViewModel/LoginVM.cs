@@ -16,8 +16,8 @@ namespace CTIS.ViewModel
         public LoginVM()
         {
             User = new User();
-            User.Email = "derra@gmail.com";
-            User.Password = "Password123";
+            User.Email = "manager@gmail.com";
+            User.Password = "password123";
             LoginCommand = new Command(LoginExecute, CanLoginExecute);
             SignUpCommand = new Command(SignUpExecute);
         }
@@ -50,14 +50,29 @@ namespace CTIS.ViewModel
             if (user != null)
             {
                 App.User = user;
-                Application.Current.MainPage = new NavigationPage(new ManageTestKit());
+                if (user.Type == "Manager")
+                {
+                    Application.Current.MainPage = new NavigationPage(new ManagerInterface());
+                }
+                else if (user.Type == "Officer")
+                {
+                    Application.Current.MainPage = new NavigationPage(new OfficerInterface());
+                }
+                else if (user.Type == "Tester")
+                {
+                    Application.Current.MainPage = new NavigationPage(new TesterInterface());
+                }
+                else
+                {
+                    Application.Current.MainPage = new NavigationPage(new PatientInterface());
+                }
             }
             else if (!IsValidEmail(User.Email))
             {
                 await Application.Current.MainPage.DisplayAlert("Invalid Email", "Please enter a valid email address", "OK");
                 return;
             }
-            else 
+            else
             {
                 await Application.Current.MainPage.DisplayAlert("Login Error", "Can't find user with matching email and password", "OK");
                 return;

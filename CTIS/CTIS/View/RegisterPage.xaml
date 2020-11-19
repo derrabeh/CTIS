@@ -38,7 +38,7 @@
 
                 <!--Full name-->
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Full Name: " VerticalOptions="Center" FontSize="18"/>
+                    <Label Text="Full Name: " VerticalOptions="Center" FontSize="18" />
                     <Entry Text="{Binding Name}" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
                 

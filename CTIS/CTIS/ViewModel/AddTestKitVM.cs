@@ -86,6 +86,7 @@ namespace CTIS.ViewModel
             else
             {
                 await FirebaseDBConnection.AddKitAsync(TestKit);
+                this.OnPropertyChanged();
                 Application.Current.MainPage = new NavigationPage(new ManageTestKit());
             }
         }
