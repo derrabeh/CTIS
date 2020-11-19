@@ -16,8 +16,8 @@ namespace CTIS.ViewModel
         public LoginVM()
         {
             User = new User();
-            User.Email = "derra@gmail.com";
-            User.Password = "Password123";
+            User.Email = "manager@gmail.com";
+            User.Password = "password123";
             LoginCommand = new Command(LoginExecute, CanLoginExecute);
             SignUpCommand = new Command(SignUpExecute);
         }
@@ -50,7 +50,7 @@ namespace CTIS.ViewModel
             if (user != null)
             {
                 App.User = user;
-                Application.Current.MainPage = new NavigationPage(new ManageTestKit());
+                Application.Current.MainPage = new NavigationPage(new GenerateTestReport());
             }
             else if (!IsValidEmail(User.Email))
             {

@@ -1,55 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CTIS.ViewModel"
-             x:Class="CTIS.View.GenerateTestReport">
+             x:Class="CTIS.View.GenerateTestReport"
+             xmlns:local="clr-namespace:CTIS.ViewModel">
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GenerateTestReportVM x:Key="GTRVM" />
         </ResourceDictionary>
     </ContentPage.Resources>
+    
 
-    <ContentPage.Content>
-
-        <StackLayout>
-
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Generate Test Report
+    <!--Back, Add, Update command-->
+    <NavigationPage.TitleView>
+        <StackLayout BindingContext="{StaticResource GTRVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="&lt; Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BackCommand}" />
+                </Label.GestureRecognizers>
             </Label>
-
-            <ScrollView HeightRequest="2000">
-                <StackLayout>
-                    <Frame HeightRequest="800" Margin="0, 0 ,0, 0" BackgroundColor="White" HasShadow="True">
-                        <StackLayout BindingContext="{StaticResource GTRVM}">
-                            <ListView ItemsSource="{Binding CovidTestList}"
-                                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <ViewCell>
-                                            <Grid BackgroundColor="DeepPink" >
-                                                <Label Text="{Binding TestID}" 
-                                       VerticalOptions="Center"
-                                       Margin="20, 0"
-                                       FontSize="20"
-                                       TextColor="Black"/>
-                                            </Grid>
-                                        </ViewCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
-
-
         </StackLayout>
-    </ContentPage.Content>
+    </NavigationPage.TitleView>
+    
+        <StackLayout BindingContext="{StaticResource GTRVM}" >
+            <ListView ItemsSource="{Binding CovidTestList} "
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout>
+                                <Label Text="{Binding Status}" TextColor="white"/>
+                                <Label Text="{Binding TestID}" TextColor="white"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    
 </ContentPage>
