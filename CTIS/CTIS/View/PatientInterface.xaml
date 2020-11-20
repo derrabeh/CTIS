@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:OfficerInterfaceVM x:Key="PIVM"/>
+            <local:PatientInterfaceVM x:Key="PIVM"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 

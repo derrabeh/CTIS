@@ -59,3 +59,33 @@ C:\Users\User\Documents\GitHub\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.dl
 C:\Users\User\Documents\GitHub\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\ref\CTIS.dll
 C:\Users\User\Documents\GitHub\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.pdb
 C:\Users\User\Documents\GitHub\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\DisplayTestingHistory.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.deps.json
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.dll
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\ref\CTIS.dll
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\bin\Release\netstandard2.0\CTIS.pdb
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.csprojAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\AddCentre.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\AddTester.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\AddTestKit.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\EditTestKit.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\GenerateTestReport.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ManagerInterface.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ManageTestKit.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\OfficerInterface.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\PatientInterface.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\RecordNewTest.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\RegisterPage.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\TesterInterface.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\UpdateTest.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ViewTestingHistory.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\ViewTestReport.xaml.g.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.AssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.dll
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\ref\CTIS.dll
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.pdb

@@ -6,11 +6,11 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:OfficerInterfaceVM x:Key="OIVM"/>
+            <local:PatientInterfaceVM x:Key="PIVM"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid BindingContext="{StaticResource OIVM}">
+    <Grid BindingContext="{StaticResource PIVM}">
         <Grid.RowDefinitions>
             <RowDefinition Height="150" />
             <RowDefinition Height="100" />
@@ -36,7 +36,7 @@
         <Label Grid.Row="1" 
                Text="{Binding WelcomeLabel}"
                Padding="20"
-                   FontSize="26"
+                   FontSize="20"
                    HorizontalOptions="Start"
                    TextColor="DeepPink"
                    FontFamily="Arimo"/>
