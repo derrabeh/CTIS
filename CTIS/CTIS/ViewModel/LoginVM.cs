@@ -64,7 +64,7 @@ namespace CTIS.ViewModel
                 }
                 else
                 {
-                    Application.Current.MainPage = new NavigationPage(new PatientInterface());
+                    Application.Current.MainPage = new NavigationPage(new ViewTestingHistory());
                 }
             }
             else if (!IsValidEmail(User.Email))

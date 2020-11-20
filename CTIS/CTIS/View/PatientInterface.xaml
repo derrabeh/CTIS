@@ -6,71 +6,57 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:PatientInterfaceVM x:Key="PIVM" />
+            <local:OfficerInterfaceVM x:Key="PIVM"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.Content>
-        <StackLayout BackgroundColor="White">
+    <Grid BindingContext="{StaticResource PIVM}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
 
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Hello Patient!
-            </Label>
-
-            <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                <StackLayout>
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="View Testing History"
-                                FontAttributes="Bold"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Grid.ColumnSpan="2"
-                                HeightRequest="150"
-                                Clicked="Button_Clicked"
-                                ></Button>
-
-                    </Grid>
-
-
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-                    <Label></Label>
-
-
-                    <Button BackgroundColor="DeepPink"
-                                CornerRadius="0"
-                                Text="Logout"
-                                Clicked="Button_Clicked_1"
-                                ></Button>
-
-                </StackLayout>
-            </Frame>
+        <!--Logo section-->
+        <Image Source="deeppink.png" 
+               Aspect="Fill" 
+               HeightRequest="300" 
+               Margin="0"
+               VerticalOptions="StartAndExpand"/>
+        <StackLayout Padding="20" Grid.Row="0" VerticalOptions="Center">
+            <Label Text="C T I S"
+                   FontSize="54"
+                   HorizontalOptions="Center"
+                   TextColor="White" 
+                   FontFamily="Goldman"/>
         </StackLayout>
-    </ContentPage.Content>
+
+
+        <Label Grid.Row="1" 
+               Text="{Binding WelcomeLabel}"
+               Padding="20"
+                   FontSize="26"
+                   HorizontalOptions="Start"
+                   TextColor="DeepPink"
+                   FontFamily="Arimo"/>
+
+        <!--Main menu-->
+        <StackLayout Grid.Row="2" Margin="20">
+
+            <Button Command="{Binding ViewTestingHistoryCommand}"
+                CornerRadius="5"
+                Text="View Testing History" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+            
+        </StackLayout>
+
+        <Button Grid.Row ="3" 
+                    BackgroundColor="DeepPink"
+                    Text="Sign Out"
+                    TextColor="White"
+                    Command="{Binding SignOutCommand}"/>
+
+    </Grid>
 </ContentPage>

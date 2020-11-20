@@ -43,26 +43,25 @@
 
         <!--Main menu-->
         <StackLayout Grid.Row="2" Margin="20">
-            <Button 
-                CornerRadius="5"
-                Text="Register Test Centre" 
-                TextColor="White"
-                BackgroundColor="#c7c7cc"/>
-            <Button 
-                CornerRadius="5"
-                Text="Manage Test Kits" 
-                TextColor="White"
-                BackgroundColor="#c7c7cc"/>
+            
             <Button Command="{Binding GenerateTestReportCommand}"
                 CornerRadius="5"
                 Text="Generate test report" 
                 TextColor="White"
                 BackgroundColor="#007AFF"/>
-            <Button 
+
+            <Button Command="{Binding RecordNewTestCommand}"
                 CornerRadius="5"
-                Text="Record Tester" 
+                Text="Record New Test" 
                 TextColor="White"
-                BackgroundColor="#c7c7cc"/>
+                BackgroundColor="#007AFF"/>
+
+            <Button Command="{Binding UpdateTestCommand}"
+                CornerRadius="5"
+                Text="Update Test Results" 
+                TextColor="White"
+                BackgroundColor="#007AFF"/>
+            
         </StackLayout>
 
         <Button Grid.Row ="3" 

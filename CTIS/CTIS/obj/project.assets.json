@@ -1446,11 +1446,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
       "projectName": "CTIS",
-      "projectPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

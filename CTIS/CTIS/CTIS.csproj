@@ -11,6 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModel\NewFolder\**" />
+    <EmbeddedResource Remove="ViewModel\NewFolder\**" />
+    <None Remove="ViewModel\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModel\DisplayTestingHistoryVM.cs" />
+    <Compile Remove="View\DisplayTestingHistory.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="View\DisplayTestingHistory.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Utilities\Arimo.ttf" />
     <None Remove="Utilities\Goldman-Regular.ttf" />
   </ItemGroup>

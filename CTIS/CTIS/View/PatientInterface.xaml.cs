@@ -17,20 +17,5 @@ namespace CTIS.View
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ViewTestingHistory());
-        }
-
-        private async void Button_Clicked_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
-        }
-
-        public class MyData
-        {
-            public string Data { get; set; }
-        }
-
     }
 }

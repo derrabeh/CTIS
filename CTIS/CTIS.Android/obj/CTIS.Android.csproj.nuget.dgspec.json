@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj",
         "projectName": "CTIS.Android",
-        "projectPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS.Android\\CTIS.Android.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS.Android\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
         "projectName": "CTIS",
-        "projectPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\CTIS.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Visual Studio\\CTIS\\CTIS\\CTIS\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\CTIS\\CTIS\\CTIS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
