@@ -6,11 +6,11 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:PatientInterfaceVM x:Key="PIVM"/>
+            <local:TesterInterfaceVM x:Key="TIVM"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid BindingContext="{StaticResource PIVM}">
+    <Grid BindingContext="{StaticResource TIVM}">
         <Grid.RowDefinitions>
             <RowDefinition Height="150" />
             <RowDefinition Height="100" />

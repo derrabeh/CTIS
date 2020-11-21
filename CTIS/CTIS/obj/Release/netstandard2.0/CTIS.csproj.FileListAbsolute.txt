@@ -89,3 +89,4 @@ C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\
 C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.dll
 C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\ref\CTIS.dll
 C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\CTIS.pdb
+C:\Users\User\Documents\Visual Studio\CTIS\CTIS\CTIS\obj\Release\netstandard2.0\View\EditTest.xaml.g.cs

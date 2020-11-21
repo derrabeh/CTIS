@@ -77,6 +77,13 @@ namespace CTIS.Utilities
             await firebaseClient.Child("CovidTest").PostAsync(test);
         }
 
+        public static async Task DeleteTestAsync(CovidTest test)
+        {
+            var item = (await firebaseClient.Child("CovidTest").OnceAsync<CovidTest>()).
+                Where(k => k.Object.TestID == test.TestID).FirstOrDefault();
+            await firebaseClient.Child("CovidTest").Child(item.Key).DeleteAsync();
+        }
+
         //Update test 
         public static async Task EditTestAsync(CovidTest test)
         {

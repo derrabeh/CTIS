@@ -36,7 +36,7 @@
         <Label Grid.Row="1" 
                Text="{Binding WelcomeLabel}"
                Padding="20"
-                   FontSize="26"
+                   FontSize="20"
                    HorizontalOptions="Start"
                    TextColor="DeepPink"
                    FontFamily="Arimo"/>

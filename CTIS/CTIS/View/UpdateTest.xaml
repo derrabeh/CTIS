@@ -1,38 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CTIS.View.UpdateTest">
-    <ContentPage.Content>
+             x:Class="CTIS.View.UpdateTest"
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             NavigationPage.HasBackButton="True"
+             NavigationPage.HasNavigationBar="True">
 
-        <StackLayout>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:UpdateTestVM x:Key="UTVM" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-            <Label TextColor="Black" 
-                           FontSize="20" 
-                           FontAttributes="Bold" 
-                           HeightRequest="110"
-                           VerticalTextAlignment="Center"
-                           HorizontalTextAlignment="Center" 
-                           BackgroundColor="DeepPink">
-                Update Test
+    <!--Back, Add command-->
+    <NavigationPage.TitleView>
+        <StackLayout BindingContext="{StaticResource UTVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Back"  FontSize="18" HorizontalOptions="Start" TextColor="White" Margin="0,14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BackCommand}" />
+                </Label.GestureRecognizers>
             </Label>
-
-            <ScrollView HeightRequest="2000">
-                <StackLayout>
-                    <Frame HeightRequest="800" Margin="20, 0 ,20, 0" BackgroundColor="White" HasShadow="True">
-                        <StackLayout>
-
-
-
-
-
-
-
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </ScrollView>
-
-
+            <Label Text="Add"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AddCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
-    </ContentPage.Content>
+    </NavigationPage.TitleView>
+
+    <StackLayout BindingContext="{StaticResource UTVM}">
+        <ListView ItemsSource="{Binding TestList}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+                  HasUnevenRows="True"
+                  Margin="20" x:Name="KitsList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout>
+                            <Label Text="{Binding TestID}" TextColor="DeepPink" FontSize="20" />
+                            <Label Text="{Binding Status}" TextColor="Gray" FontSize="18"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>

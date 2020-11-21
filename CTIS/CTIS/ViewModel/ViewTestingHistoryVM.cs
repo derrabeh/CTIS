@@ -6,20 +6,25 @@ using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace CTIS.ViewModel
 {
     class ViewTestingHistoryVM : BaseVM
     {
+        
 
+        public ObservableCollection<User> UsersList { get; set; }
         public ObservableCollection<CovidTest> CovidTestList { get; set; }
         public CovidTest CovidTest { get; set; }
+        public User User { get; set; }
         public Command AddCommand { get; set; }
         public Command BackCommand { get; set; }
 
         public ViewTestingHistoryVM()
         {
             CovidTestList = new ObservableCollection<CovidTest>();
+            UsersList = new ObservableCollection<User>();
             GetAllTests();
             BackCommand = new Command(BackExecute);
         }
@@ -69,8 +74,23 @@ namespace CTIS.ViewModel
             }
         }
 
+        public async void GetPatientTests()
+        {
+
+            List<CovidTest> tests = await FirebaseDBConnection.GetAllTestsAsync();
+            List<User> users = await FirebaseDBConnection.GetAllUsersAsync();
+
+
+                foreach (CovidTest test in tests)
+                {
+                    CovidTestList.Add(test);
+                }
+
+            }
+        }
+
 
 
     }
-}
+
 

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:CTIS.ViewModel"
+             x:Class="CTIS.View.EditTest">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:EditTestVM x:Key="ETVM" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!--cancel command-->
+    <NavigationPage.TitleView>
+        <StackLayout BindingContext="{StaticResource ETVM}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Cancel"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CancelCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout Margin="20" 
+                 BindingContext="{StaticResource ETVM}" 
+                 HorizontalOptions="FillAndExpand">
+        <Label Text="Update an existing test."
+                   FontSize="26"
+                   TextColor="DeepPink"
+                   FontFamily="Arimo"
+                   Margin="0,10"/>
+
+        <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+            <Label Text="Name: " VerticalOptions="Center" FontSize="18"/>
+            <Label Text="{Binding PatientName}" HorizontalOptions="FillAndExpand"  />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Result: " VerticalOptions="Center" FontSize="18" />
+            <Picker ItemsSource="{Binding ResultList}" SelectedItem="{Binding Result}" HorizontalOptions="FillAndExpand"  FontSize="18"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Result Date: " VerticalOptions="Center" FontSize="18" />
+            <DatePicker Date="{Binding ResultDate}" HorizontalOptions="FillAndExpand"  FontSize="18"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Test Date: " VerticalOptions="Center" FontSize="18" />
+            <Label Text="{Binding TestDate}" HorizontalOptions="FillAndExpand"  FontSize="18"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Status: " VerticalOptions="Center" FontSize="18" />
+            <Picker ItemsSource="{Binding StatusList}" SelectedItem="{Binding Result}" HorizontalOptions="FillAndExpand"  FontSize="18"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" >
+            <Label Text="TestID: " VerticalOptions="Center" FontSize="18" />
+            <Label Text="{Binding TestID}" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Tester: " VerticalOptions="Center" FontSize="18" />
+            <Label Text="{Binding TestedBy}" HorizontalOptions="FillAndExpand" FontSize="18"/>
+        </StackLayout>
+
+       
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Update" FontSize="16" Margin="0,40"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding SaveCommand}"
+                        BackgroundColor="DeepPink"
+                        TextColor="White"
+                        HeightRequest="40"
+                        CornerRadius="10"/>
+            <Button Text="Delete" FontSize="16" Margin="0,40"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding DeleteCommand}"
+                        BackgroundColor="DeepPink"
+                        TextColor="White"
+                        HeightRequest="40"
+                        CornerRadius="10"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
