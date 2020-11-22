@@ -61,7 +61,7 @@ namespace CTIS.Utilities
                 item => new CovidTest
                 {
                     TestID = item.Object.TestID,
-                    PatientName = item.Object.TestID,
+                    PatientName = item.Object.PatientName,
                     TestDate = item.Object.TestDate,
                     Result = item.Object.Result,
                     ResultDate = item.Object.ResultDate,

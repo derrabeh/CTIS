@@ -13,7 +13,6 @@ namespace CTIS.ViewModel
     class ViewTestingHistoryVM : BaseVM
     {
         
-
         public ObservableCollection<User> UsersList { get; set; }
         public ObservableCollection<CovidTest> CovidTestList { get; set; }
         public CovidTest CovidTest { get; set; }
@@ -80,7 +79,7 @@ namespace CTIS.ViewModel
             List<CovidTest> tests = await FirebaseDBConnection.GetAllTestsAsync();
             List<User> users = await FirebaseDBConnection.GetAllUsersAsync();
 
-
+            
                 foreach (CovidTest test in tests)
                 {
                     CovidTestList.Add(test);

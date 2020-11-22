@@ -11,7 +11,6 @@ namespace CTIS.ViewModel
     {
         public static CovidTest CovidTest { get; set; }
         public ObservableCollection<string> StatusList { get; set; }
-
         public ObservableCollection<string> ResultList { get; set; }
         public Command SaveCommand { get; set; }
         public Command CancelCommand { get; set; }
@@ -132,7 +131,7 @@ namespace CTIS.ViewModel
             if (string.IsNullOrWhiteSpace(CovidTest.TestID) &&
                 string.IsNullOrWhiteSpace(CovidTest.Status))
             {
-                await Application.Current.MainPage.DisplayAlert("Missing field", "Test kit name or current stock cannot be empty.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Missing field", "Test fields cannot be empty.", "OK");
                 return;
             }
             else

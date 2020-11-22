@@ -20,11 +20,7 @@
                     <TapGestureRecognizer Command="{Binding BackCommand}" />
                 </Label.GestureRecognizers>
             </Label>
-            <Label Text="Add"  FontSize="18" HorizontalOptions="EndAndExpand" TextColor="White" Margin="14">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding AddCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
+            
         </StackLayout>
     </NavigationPage.TitleView>
 

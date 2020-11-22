@@ -22,6 +22,7 @@ namespace CTIS.ViewModel
             User.Email = "patient@gmail.com";
             User.Password = "password123";
             User.Passport = "A123456";
+            User.DOB = DateTime.Today;
         }
 
         public string Name

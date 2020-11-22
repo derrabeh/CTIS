@@ -6,6 +6,8 @@ namespace CTIS.Model
 {
     public class CovidTest
     {
+        internal DateTime thisDay;
+
         public string TestID { get; set; }
         public string PatientName { get; set; } //how to link to a patient instance...? 
         public DateTime TestDate { get; set; }

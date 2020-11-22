@@ -15,6 +15,7 @@ namespace CTIS.ViewModel
         public Command SaveCommand { get; set; }
         public Command BackCommand { get; set; }
 
+
         public RecordNewTestVM()
         {
             CovidTest = new CovidTest();
@@ -30,6 +31,7 @@ namespace CTIS.ViewModel
             SaveCommand = new Command(SaveExecute);
             BackCommand = new Command(BackExecute);
             CancelCommand = new Command(CancelExecute);
+            CovidTest.TestDate = DateTime.Today;
         }
 
         private async void BackExecute(Object obj)
